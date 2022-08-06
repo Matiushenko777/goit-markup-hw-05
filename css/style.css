@@ -63,7 +63,7 @@ ul {
     text-decoration: none;
 }
 .logoColor {
-color: #000000
+color: #000000;
 }
 .header-menu-list {
     display: flex;
@@ -71,6 +71,21 @@ color: #000000
 }
 .header-menu-item:not(:last-child) {
     margin-right: 50px;
+}
+.header-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #212121; 
+}
+.header-link.current {
+    color: #2196F3;
 }
 .current {
     position: relative;
@@ -85,19 +100,6 @@ color: #000000
     height: 4px;
     border-radius: 2px;
     background-color: #2196F3; 
-}
-.header-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: #212121; 
-    
 }
 .header-link:hover, 
 .header-link:focus {
@@ -251,19 +253,20 @@ color: #000000
 .about-text {
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.33px;
+    line-height: 1.33;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-   
     position: absolute;
     width: 100%;
+    height: 70px;
     bottom: 0px;
     left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(47, 48, 58, 0.8);
-    padding-bottom: 27px;
-    padding-top: 27px;
 }
 
 /* ------------TEAM--------------  */
@@ -355,11 +358,6 @@ color: #000000
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.album-btn:hover, 
-.album-btn:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px 
-    rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 .btn {
     padding: 6px 22px;
     border: transparent;
@@ -381,6 +379,8 @@ color: #000000
 .btn:focus {
     background-color: #2196F3;
     color: #FFFFFF;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px 
+    rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .album-foto-list {
    display: flex;
@@ -398,7 +398,7 @@ color: #000000
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
      rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.album-foto-item:hover .album-up-text {
+.album-link:hover .album-up-text {
     transform: translateY(0 ); 
 }
 .album-up-wrap {
@@ -417,7 +417,7 @@ color: #000000
     letter-spacing: 0.03em;
     color: #FFFFFF;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms linear ;
 }
 .foto-info {  
